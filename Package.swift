@@ -1,4 +1,4 @@
-// swift-tools-version:5.6
+// swift-tools-version:5.7
 //
 //  Package.swift
 //
@@ -8,7 +8,10 @@ import PackageDescription
 let package = Package(
     name: "SwiftMaskTextfield",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v16),
+        .tvOS(.v16),
+        .macCatalyst(.v16),
+        .watchOS(.v9),
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
@@ -24,5 +27,6 @@ let package = Package(
              dependencies: [],
              path: "swift-mask-textfield/Sources/"
          )
-     ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
